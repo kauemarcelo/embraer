@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Estratégico de Gestão | Embraer</title>
+<style>
+:root{--navy:#10233f;--blue:#1769aa;--sky:#eaf4fc;--gold:#f1b84b;--ink:#243247;--muted:#617086;--paper:#f6f8fb;--white:#fff;--line:#dce4ee;--green:#e9f7ef;--red:#fff0ef;--purple:#f2efff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+header{background:linear-gradient(130deg,#0d1e35,#174c7d 72%,#2575ad);color:white;padding:24px max(22px,calc((100% - 1120px)/2)) 74px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:1.5px;font-size:1.05rem}.tag{border:1px solid #ffffff70;border-radius:999px;padding:6px 12px;font-size:.78rem}
+.hero{max-width:850px;padding-top:58px}.eyebrow{color:#ffcf70;text-transform:uppercase;letter-spacing:2px;font-weight:700;font-size:.78rem}.hero h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.08;margin:14px 0}.hero p{font-size:1.1rem;max-width:750px;color:#e8f1fb}.hero .note{font-size:.86rem;color:#c9d9e9}.team{margin-top:24px;padding:18px 20px;border:1px solid #ffffff45;border-radius:14px;background:#ffffff12;max-width:680px}.team h2{font-size:1rem;color:#ffcf70;margin:0 0 10px}.team-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.team-member{padding:10px 12px;border-radius:9px;background:#ffffff10}.team-member strong{display:block;color:#fff}.team-member span{font-size:.88rem;color:#d8e8f7}@media(max-width:600px){.team-list{grid-template-columns:1fr}}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 18px #10233f0b}
+.navinner{max-width:1120px;margin:auto;padding:10px 18px;display:flex;gap:8px;overflow-x:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-size:.84rem;font-weight:700;padding:8px 10px;border-radius:8px}nav a:hover{background:var(--sky);color:var(--blue)}
+main{max-width:1120px;margin:0 auto;padding:28px 18px 70px}
+section{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,40px);margin:24px 0;box-shadow:0 8px 30px #132c4c08;scroll-margin-top:80px}
+.kicker{color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}h2{color:var(--navy);font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.2;margin:8px 0 14px}h3{color:var(--navy);margin:0 0 8px;font-size:1.12rem}p{margin:8px 0 14px}.lead{font-size:1.08rem;color:#41516a}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);padding:19px;border-radius:13px;background:#fff}.card p:last-child,.card ul:last-child{margin-bottom:0}.stat{background:var(--sky);border-radius:12px;padding:18px}.stat strong{display:block;color:var(--blue);font-size:1.55rem}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}.muted{color:var(--muted);font-size:.92rem}.callout{border-left:4px solid var(--gold);padding:14px 17px;background:#fff8e9;border-radius:0 10px 10px 0;margin:18px 0}
+.timeline{border-left:3px solid #b6d8f4;margin:22px 0 0 8px;padding-left:22px}.event{position:relative;margin:0 0 22px}.event:before{content:"";position:absolute;left:-30px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:3px solid white;box-shadow:0 0 0 2px #b6d8f4}.event strong{color:var(--blue)}
+.swot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}.swotbox{border-radius:14px;padding:22px;border:1px solid var(--line)}.swotbox ul{padding-left:20px;margin-bottom:0}.strength{background:var(--green)}.weak{background:var(--red)}.opportunity{background:var(--sky)}.threat{background:var(--purple)}.swotbox h3{display:flex;gap:9px;align-items:center}.symbol{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#ffffffc9}
+.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px;margin:15px 0}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#edf4fa;color:var(--navy)}.pill{display:inline-block;border-radius:999px;padding:4px 9px;font-size:.78rem;font-weight:700;background:var(--sky);color:var(--blue)}
+footer{background:var(--navy);color:#d9e6f4;padding:32px 20px;text-align:center;font-size:.9rem}footer a{color:#ffcf70}a{color:var(--blue)}.source-list li{margin-bottom:10px;overflow-wrap:anywhere}
+@media(max-width:760px){.grid,.grid3,.swot{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:36px}section{padding:22px}}
+@media print{nav{position:static}.hero{padding-top:20px}section{break-inside:avoid;box-shadow:none}body{background:white}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><div class="brand">PROJETO ESTRATÉGICO DE GESTÃO</div><div class="tag">UC: TOMADA DE DECISÃO · A3</div></div>
+  <div class="hero">
+    <div class="eyebrow">Estudo de caso empresarial</div>
+    <h1>Embraer: tomada de decisão diante do encerramento da parceria com a Boeing</h1>
+    <p>Uma análise estratégica do acordo anunciado em 2018 e encerrado em abril de 2020, considerando o contexto organizacional, as alternativas decisórias, a análise SWOT e uma proposta de plano de ação.</p>
+    <div class="team" aria-label="Integrantes do grupo">
+      <h2>INTEGRANTES DO GRUPO · FACULDADE SÃO JUDAS</h2>
+      <div class="team-list">
+        <div class="team-member"><strong>Sarah Helen Freire Silva</strong><span>RA: 1261115356</span></div>
+        <div class="team-member"><strong>Matheus Finelli Gonzalez</strong><span>RA: 825122939</span></div>
+      </div>
+    </div>
+    <p class="note">Material acadêmico elaborado com base no roteiro da A3. As análises e recomendações são interpretações do grupo a partir das fontes públicas citadas; não representam declarações oficiais da Embraer.</p>
+  </div>
+</header>
+<nav><div class="navinner">
+<a href="#inicio">Visão geral</a><a href="#empresa">A empresa</a><a href="#direcionadores">Missão e valores</a><a href="#caso">Estudo de caso</a><a href="#decisao">Tomada de decisão</a><a href="#swot">SWOT</a><a href="#plano">Plano de ação</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a>
+</div></nav>
+<main>
+<section id="inicio">
+<div class="kicker">01 · Apresentação</div><h2>Objetivo do projeto</h2>
+<p class="lead">Compreender como uma organização de grande porte pode analisar alternativas e responder a uma decisão estratégica que altera seus planos de crescimento, suas alianças e sua exposição a riscos.</p>
+<div class="grid3">
+<div class="card"><h3>Problema analisado</h3><p>O encerramento, em 25 de abril de 2020, do acordo de transação que previa uma parceria estratégica entre Embraer e Boeing.</p></div>
+<div class="card"><h3>Foco da UC</h3><p>Identificação do problema, alternativas, critérios, riscos, consequências e aprendizagem organizacional no processo decisório.</p></div>
+<div class="card"><h3>Objetivo principal</h3><p>Propor ações para fortalecer a autonomia estratégica, reduzir dependências críticas e ampliar a capacidade de adaptação da Embraer.</p></div>
+</div>
+<div class="callout"><strong>Delimitação:</strong> o caso é público e documentado por comunicados das próprias empresas e registros regulatórios. As partes apresentaram versões divergentes sobre o cumprimento das condições contratuais; por isso, o site não trata a responsabilidade jurídica como questão definitivamente resolvida.</div>
+</section>
+<section id="empresa">
+<div class="kicker">02 · Caracterização da organização</div><h2>Conhecendo a Embraer</h2>
+<p>A Embraer — Empresa Brasileira de Aeronáutica S.A. — é uma companhia aeroespacial brasileira fundada em 1969. Desenvolve, fabrica, certifica e oferece suporte para aeronaves e soluções de defesa. A empresa foi privatizada em 1994 e possui atuação internacional, com clientes e operações em diferentes continentes.</p>
+<div class="stats">
+<div class="stat"><strong>1969</strong><span>ano de fundação</span></div>
+<div class="stat"><strong>9.000+</strong><span>aeronaves entregues, conforme página institucional</span></div>
+<div class="stat"><strong>100+</strong><span>países com aeronaves em operação</span></div>
+<div class="stat"><strong>23 mil+</strong><span>profissionais globalmente, segundo a página institucional consultada</span></div>
+</div>
+<p class="muted">Os números acima refletem informações divulgadas pela própria empresa em sua página institucional; podem mudar com o tempo.</p>
+<div class="grid">
+<div class="card"><h3>Porte e alcance</h3><p><span class="pill">Grande porte</span> <span class="pill">Atuação internacional</span></p><p>É uma empresa de grande porte, com presença global, uma cadeia de suprimentos internacional e atuação em um setor de alta complexidade tecnológica e regulatória.</p></div>
+<div class="card"><h3>Setor de mercado</h3><p>Indústria aeroespacial e de defesa, que exige investimentos elevados em pesquisa e desenvolvimento, certificação, segurança, engenharia, produção e suporte ao cliente.</p></div>
+</div>
+<h3 style="margin-top:24px">Histórico resumido</h3>
+<div class="timeline">
+<div class="event"><strong>1969 — Fundação</strong><p>A empresa nasce com apoio do governo brasileiro, tendo como propósito desenvolver capacidade aeronáutica nacional.</p></div>
+<div class="event"><strong>Décadas seguintes — Desenvolvimento industrial</strong><p>Amplia sua experiência de engenharia e seu portfólio, incluindo aeronaves civis e militares, e passa a atender mercados internacionais.</p></div>
+<div class="event"><strong>1994 — Privatização</strong><p>A privatização marca uma nova etapa de organização empresarial e competitividade global.</p></div>
+<div class="event"><strong>2018–2019 — Negociação com a Boeing</strong><p>As empresas estruturam uma transação para combinar a área de aviação comercial da Embraer com a Boeing em uma joint venture, além de prever cooperação em mercados para o C-390 Millennium.</p></div>
+<div class="event"><strong>2020 — Encerramento do acordo</strong><p>A Boeing comunica a rescisão do acordo em 25 de abril. A Embraer contesta publicamente a justificativa e afirma que buscaria medidas para reparar os prejuízos alegados.</p></div>
+</div>
+<h3 style="margin-top:24px">Produtos, serviços e clientes</h3>
+<div class="grid">
+<div class="card"><h3>Aviação comercial</h3><p>Aeronaves para companhias aéreas, especialmente em segmentos de menor e médio porte em relação aos aviões de fuselagem larga.</p></div>
+<div class="card"><h3>Jatos executivos</h3><p>Aeronaves para clientes corporativos, operadores e proprietários privados.</p></div>
+<div class="card"><h3>Defesa e segurança</h3><p>Aeronaves e soluções destinadas a governos e forças armadas, incluindo o C-390 Millennium.</p></div>
+<div class="card"><h3>Serviços e suporte</h3><p>Manutenção, peças, treinamento, assistência técnica e suporte ao longo do ciclo de vida das aeronaves.</p></div>
+</div>
+<p><strong>Feedback dos clientes:</strong> por se tratar de clientes empresariais, companhias aéreas e governos, a avaliação tende a considerar segurança, confiabilidade, desempenho, custos operacionais, disponibilidade de peças e qualidade do suporte. A página institucional destaca tecnologia, segurança e suporte, mas este trabalho não apresenta uma pesquisa independente de satisfação; portanto, esses critérios são tratados como dimensões relevantes de avaliação, e não como uma nota de satisfação comprovada.</p>
+</section>
+<section id="direcionadores">
+<div class="kicker">03 · Identidade e objetivos</div><h2>Missão, visão, valores e objetivo principal</h2>
+<div class="callout"><strong>Nota de precisão:</strong> a página institucional consultada comunica propósito e princípios como inovação, segurança, qualidade e sustentabilidade, mas não apresenta necessariamente uma declaração formal separada de “missão, visão e valores” com essa exata estrutura. Abaixo, missão, visão e objetivo são sínteses acadêmicas elaboradas para a análise, não citações literais oficiais.</div>
+<div class="grid">
+<div class="card"><h3>Missão — síntese para o estudo</h3><p>Desenvolver e oferecer soluções aeroespaciais seguras, eficientes e inovadoras, atendendo às necessidades de clientes civis e governamentais.</p></div>
+<div class="card"><h3>Visão — síntese para o estudo</h3><p>Manter relevância global na indústria aeroespacial, combinando excelência de engenharia, competitividade, inovação e desenvolvimento sustentável.</p></div>
+<div class="card"><h3>Valores e princípios observáveis</h3><ul><li>Segurança e qualidade;</li><li>Inovação e excelência de engenharia;</li><li>Sustentabilidade;</li><li>Compromisso com clientes e suporte;</li><li>Colaboração e desenvolvimento tecnológico.</li></ul></div>
+<div class="card"><h3>Objetivo principal da organização</h3><p>Desenvolver, produzir e oferecer suporte a produtos e soluções aeroespaciais competitivos, com crescimento sustentável e presença em mercados globais.</p></div>
+</div>
+<h3 style="margin-top:22px">Objetivos e metas estratégicas propostos para este estudo</h3>
+<ul>
+<li>Diminuir a exposição a dependências estratégicas de uma única parceria comercial.</li>
+<li>Preservar a continuidade da operação e a confiança de clientes, fornecedores, colaboradores e investidores em períodos de incerteza.</li>
+<li>Fortalecer a diversificação de mercados, receitas e alianças tecnológicas.</li>
+<li>Melhorar a gestão de riscos contratuais, regulatórios, financeiros e de cadeia de suprimentos.</li>
+</ul>
+</section>
+<section id="caso">
+<div class="kicker">04 · Estudo de caso</div><h2>O acordo Embraer–Boeing e seu encerramento em 2020</h2>
+<p>Em 2018, Embraer e Boeing anunciaram uma parceria estratégica que previa uma joint venture envolvendo o negócio de aviação comercial e serviços relacionados da Embraer. A estrutura divulgada previa participação de 80% da Boeing e 20% da Embraer nessa nova empresa, além de uma segunda iniciativa voltada à promoção de novos mercados para o avião militar C-390 Millennium.</p>
+<p>Em 25 de abril de 2020, a Boeing anunciou a rescisão do acordo, alegando que condições necessárias para a conclusão da transação não haviam sido atendidas. A Embraer contestou a decisão em comunicado ao mercado, afirmando acreditar que a rescisão era indevida. Portanto, as fontes registram posições divergentes das duas empresas.</p>
+<div class="grid">
+<div class="card"><h3>Por que a parceria era estratégica?</h3><ul><li>Potencial de ampliar a escala comercial e o alcance internacional;</li><li>Possibilidade de aproveitar canais de venda, serviços e relacionamento da Boeing;</li><li>Expectativa de desenvolvimento de novos mercados para o C-390;</li><li>Reorganização do posicionamento da Embraer na aviação comercial.</li></ul></div>
+<div class="card"><h3>Qual foi o dilema de gestão?</h3><p>Como preservar a competitividade e a continuidade dos negócios quando uma transação estratégica de grande impacto não se concretiza, em meio a divergências contratuais e incerteza do ambiente externo?</p></div>
+</div>
+<h3 style="margin-top:24px">Linha do tempo do caso</h3>
+<div class="timeline">
+<div class="event"><strong>2018</strong><p>Divulgação da intenção de estabelecer parceria estratégica entre as empresas.</p></div>
+<div class="event"><strong>2019</strong><p>Avanço para documentos definitivos da transação e aprovação de acionistas da Embraer, conforme comunicação pública.</p></div>
+<div class="event"><strong>24–25 de abril de 2020</strong><p>O acordo alcança a data-limite inicial prevista e, no dia 25, a Boeing comunica a rescisão.</p></div>
+<div class="event"><strong>Após a rescisão</strong><p>A Embraer contesta a decisão e informa que buscará medidas cabíveis. O episódio torna-se um caso relevante de gestão de riscos contratuais, dependência estratégica e adaptação organizacional.</p></div>
+</div>
+</section>
+<section id="decisao">
+<div class="kicker">05 · Análise da tomada de decisão</div><h2>Problema, alternativas e critérios</h2>
+<h3>Problema central</h3>
+<p>Redefinir a estratégia de crescimento da aviação comercial após a interrupção de uma parceria que poderia alterar a estrutura do negócio, protegendo os ativos, os clientes e a capacidade competitiva da organização.</p>
+<h3>Alternativas que poderiam ser consideradas pela gestão</h3>
+<div class="grid">
+<div class="card"><h3>Alternativa A — Buscar a conclusão ou renegociação</h3><p><strong>Benefício possível:</strong> preservar parte dos ganhos estratégicos originalmente esperados.</p><p><strong>Risco:</strong> prolongar a incerteza, consumir recursos jurídicos e de gestão e depender do alinhamento entre as partes.</p></div>
+<div class="card"><h3>Alternativa B — Contestar a rescisão e proteger direitos</h3><p><strong>Benefício possível:</strong> defender os interesses contratuais e buscar reparação caso a empresa entendesse que sofreu prejuízo.</p><p><strong>Risco:</strong> custos, duração e desfecho de procedimentos legais ou arbitrais incertos.</p></div>
+<div class="card"><h3>Alternativa C — Reforçar a operação independente</h3><p><strong>Benefício possível:</strong> preservar autonomia, desenvolver novas oportunidades e reduzir dependência de um parceiro.</p><p><strong>Risco:</strong> exigir capital, capacidade comercial, foco executivo e gestão cuidadosa da transição.</p></div>
+<div class="card"><h3>Alternativa D — Buscar novas alianças seletivas</h3><p><strong>Benefício possível:</strong> obter acesso a mercados, tecnologia ou serviços sem depender de uma única transação ampla.</p><p><strong>Risco:</strong> novas negociações também podem falhar e demandam critérios rigorosos de compatibilidade.</p></div>
+</div>
+<p class="muted">As alternativas acima são construídas para fins didáticos; não significam que todas tenham sido formalmente avaliadas pela administração nos mesmos termos.</p>
+<h3 style="margin-top:24px">Critérios recomendados para comparar alternativas</h3>
+<div class="tablewrap"><table><thead><tr><th>Critério</th><th>Pergunta para a decisão</th><th>Importância</th></tr></thead><tbody>
+<tr><td>Viabilidade financeira</td><td>Qual alternativa preserva liquidez e cria valor no longo prazo?</td><td>Alta</td></tr>
+<tr><td>Autonomia estratégica</td><td>Quanto a empresa mantém controle sobre capacidades e decisões centrais?</td><td>Alta</td></tr>
+<tr><td>Risco jurídico e contratual</td><td>Quais obrigações, custos, prazos e incertezas estão envolvidos?</td><td>Alta</td></tr>
+<tr><td>Impacto nos clientes</td><td>Há continuidade de entrega, manutenção, peças e suporte?</td><td>Alta</td></tr>
+<tr><td>Capacidade operacional</td><td>A organização dispõe de pessoas, tecnologia e estrutura para executar a alternativa?</td><td>Alta</td></tr>
+<tr><td>Potencial de crescimento</td><td>A alternativa amplia mercados, competências e receitas futuras?</td><td>Média/alta</td></tr>
+</tbody></table></div>
+<h3>Teorias e ferramentas de tomada de decisão aplicadas</h3>
+<div class="grid">
+<div class="card"><h3>Modelo racional</h3><p>Definir o problema, levantar informações, estabelecer critérios, comparar alternativas, escolher e monitorar resultados. É útil para tornar explícitos os trade-offs, embora decisões reais ocorram sob limites de tempo e informação.</p></div>
+<div class="card"><h3>Racionalidade limitada</h3><p>Reconhece que gestores não possuem informação perfeita, tempo infinito ou capacidade de prever todos os cenários. Recomenda cenários, gatilhos de revisão e decisões reversíveis quando possível.</p></div>
+<div class="card"><h3>Análise de stakeholders</h3><p>Considerar efeitos sobre acionistas, colaboradores, clientes, fornecedores, reguladores e parceiros, comunicando riscos e responsabilidades com transparência.</p></div>
+<div class="card"><h3>Gestão de riscos e contingência</h3><p>Antecipar cenários de falha contratual, criar planos alternativos e evitar que a estratégia dependa exclusivamente de uma transação ainda não concluída.</p></div>
+</div>
+<h3 style="margin-top:24px">Consequências e resultados observáveis</h3>
+<ul>
+<li>A transação planejada não foi concluída, exigindo reavaliação do plano estratégico.</li>
+<li>As empresas passaram a sustentar publicamente posições divergentes sobre o cumprimento das condições do contrato.</li>
+<li>A Embraer declarou que buscaria medidas para contestar a rescisão e tratar os prejuízos alegados.</li>
+<li>O caso demonstra a importância de planos de contingência, avaliação de dependências e comunicação com stakeholders.</li>
+</ul>
+</section>
+<section id="swot">
+<div class="kicker">06 · Ambiente organizacional</div><h2>Análise SWOT da Embraer</h2>
+<p>A matriz SWOT separa fatores internos — forças e fraquezas — de fatores externos — oportunidades e ameaças. A classificação é uma análise acadêmica do grupo com base nas características públicas da empresa e do setor; não é uma matriz oficial da Embraer.</p>
+<div class="swot">
+<div class="swotbox strength"><h3><span class="symbol">＋</span> Forças · ambiente interno</h3><ul>
+<li>Marca reconhecida e experiência acumulada em engenharia aeronáutica;</li>
+<li>Portfólio diversificado: aviação comercial, jatos executivos, defesa e serviços;</li>
+<li>Capacidade de desenvolvimento, certificação e suporte de aeronaves;</li>
+<li>Presença internacional e rede global de clientes e serviços;</li>
+<li>Conhecimento tecnológico e histórico de inovação.</li>
+</ul></div>
+<div class="swotbox weak"><h3><span class="symbol">−</span> Fraquezas · ambiente interno</h3><ul>
+<li>Alta complexidade e custo de desenvolver e certificar aeronaves;</li>
+<li>Necessidade contínua de investimento em pesquisa, tecnologia e pessoas especializadas;</li>
+<li>Exposição a fornecedores especializados e cadeias de suprimentos complexas;</li>
+<li>Dependência de ciclos longos de vendas, produção e suporte;</li>
+<li>Necessidade de administrar riscos elevados em contratos internacionais de grande porte.</li>
+</ul></div>
+<div class="swotbox opportunity"><h3><span class="symbol">↗</span> Oportunidades · ambiente externo</h3><ul>
+<li>Demanda por renovação de frotas e aeronaves eficientes;</li>
+<li>Expansão dos serviços de manutenção, peças e suporte ao longo do ciclo de vida;</li>
+<li>Possibilidade de ampliar presença em mercados internacionais;</li>
+<li>Modernização de frotas e demanda por soluções de defesa e transporte militar;</li>
+<li>Desenvolvimento de tecnologias e soluções de aviação com menor impacto ambiental.</li>
+</ul></div>
+<div class="swotbox threat"><h3><span class="symbol">!</span> Ameaças · ambiente externo</h3><ul>
+<li>Concorrência de grandes fabricantes globais;</li>
+<li>Oscilações econômicas, juros e câmbio que afetam custos e decisões de compra;</li>
+<li>Interrupções logísticas e escassez de componentes especializados;</li>
+<li>Mudanças regulatórias, barreiras comerciais e tensões geopolíticas;</li>
+<li>Risco de cancelamento de contratos e concentração de oportunidades em poucos clientes ou parceiros.</li>
+</ul></div>
+</div>
+<h3 style="margin-top:24px">Leitura estratégica da SWOT</h3>
+<div class="grid">
+<div class="card"><h3>Estratégias FO</h3><p>Usar a capacidade de engenharia, a marca e o portfólio para atender oportunidades de renovação de frotas e ampliar serviços pós-venda.</p></div>
+<div class="card"><h3>Estratégias FA</h3><p>Usar a diversificação de negócios e a rede internacional para reduzir a exposição a ciclos de um único mercado e responder à concorrência.</p></div>
+<div class="card"><h3>Estratégias DO</h3><p>Priorizar investimentos e parcerias seletivas que ajudem a ampliar eficiência, serviços e acesso a mercados sem comprometer a autonomia essencial.</p></div>
+<div class="card"><h3>Estratégias DA</h3><p>Fortalecer gestão de fornecedores, análise contratual, planejamento de cenários e reservas para lidar com choques externos.</p></div>
+</div>
+</section>
+<section id="plano">
+<div class="kicker">07 · Proposta de gestão</div><h2>Plano de ação estratégico</h2>
+<p>O plano abaixo é uma proposta acadêmica derivada do caso. O objetivo é converter os aprendizados da análise em iniciativas práticas, com responsáveis sugeridos, indicadores e prazos ilustrativos.</p>
+<h3>Motivação para a estratégia</h3>
+<p>O encerramento do acordo com a Boeing evidencia que alianças de grande porte podem criar oportunidades, mas também concentrar riscos. A estratégia proposta combina crescimento, autonomia, diversificação e prevenção, evitando depender de uma única transação para atingir objetivos de longo prazo.</p>
+<div class="tablewrap"><table><thead><tr><th>Ação</th><th>Como executar</th><th>Responsável sugerido</th><th>Prazo ilustrativo</th><th>Indicador de acompanhamento</th></tr></thead><tbody>
+<tr><td>1. Mapear riscos estratégicos</td><td>Manter matriz de riscos contratuais, financeiros, regulatórios e de fornecedores; definir probabilidade, impacto e mitigação.</td><td>Estratégia, Jurídico, Finanças e Suprimentos</td><td>0–3 meses</td><td>Percentual de riscos críticos com plano de mitigação</td></tr>
+<tr><td>2. Criar planos de contingência para alianças</td><td>Definir marcos contratuais, condições de saída, responsáveis, cenários alternativos e protocolos de comunicação.</td><td>Jurídico e Desenvolvimento de Negócios</td><td>0–6 meses</td><td>Percentual de alianças críticas com plano de contingência revisado</td></tr>
+<tr><td>3. Diversificar mercados e parceiros</td><td>Avaliar regiões, clientes e parceiros potenciais com critérios financeiros, tecnológicos, comerciais e de governança.</td><td>Comercial e Estratégia</td><td>6–18 meses</td><td>Participação de receitas por mercado e concentração de parceiros</td></tr>
+<tr><td>4. Fortalecer fornecedores críticos</td><td>Identificar componentes de fonte única, mapear alternativas viáveis e criar planos para interrupções de abastecimento.</td><td>Suprimentos e Operações</td><td>3–12 meses</td><td>Número de itens críticos com alternativa de fornecimento validada</td></tr>
+<tr><td>5. Investir em competências essenciais</td><td>Priorizar engenharia, inovação, certificação, gestão de projetos, análise de dados e negociação internacional.</td><td>Engenharia, RH e Lideranças</td><td>6–24 meses</td><td>Conclusão de capacitações prioritárias e marcos de projetos</td></tr>
+<tr><td>6. Proteger a confiança dos stakeholders</td><td>Comunicar decisões com consistência, informar clientes e fornecedores sobre continuidade e acompanhar preocupações.</td><td>Comunicação, Relações com Investidores e Atendimento</td><td>Contínuo</td><td>Prazo de resposta, incidentes críticos e indicadores de satisfação disponíveis</td></tr>
+<tr><td>7. Revisar a estratégia periodicamente</td><td>Realizar revisão trimestral de cenários, riscos, desempenho e hipóteses usadas na decisão.</td><td>Diretoria e área de Estratégia</td><td>Trimestral</td><td>Revisões realizadas e ações corretivas concluídas</td></tr>
+</tbody></table></div>
+<h3>Recursos organizacionais necessários</h3>
+<div class="grid3">
+<div class="card"><h3>Financeiros</h3><p>Orçamento para pesquisa e desenvolvimento, análise de riscos, consultoria especializada e desenvolvimento de mercados.</p></div>
+<div class="card"><h3>Humanos</h3><p>Engenheiros, especialistas jurídicos e financeiros, profissionais de suprimentos, gestores de projetos e equipes comerciais.</p></div>
+<div class="card"><h3>Tecnológicos e operacionais</h3><p>Sistemas de planejamento, análise de dados, gestão de contratos, monitoramento de fornecedores e indicadores de desempenho.</p></div>
+</div>
+<h3 style="margin-top:24px">Competências essenciais e vantagem competitiva</h3>
+<p>As competências relevantes para a análise incluem engenharia aeronáutica, integração de sistemas, certificação, desenvolvimento de produtos, gestão de programas complexos e suporte global. A vantagem competitiva potencial decorre da combinação dessas competências com um portfólio diversificado e relações duradouras com clientes. Para preservá-la, a empresa precisa transformar conhecimento técnico em produtos confiáveis, serviço de qualidade e capacidade de adaptação.</p>
+<h3>Fatores que interferem na administração estratégica</h3>
+<ul>
+<li><strong>Internos:</strong> orçamento, disponibilidade de talentos, cultura de inovação, capacidade produtiva, integração entre áreas e prioridades da liderança.</li>
+<li><strong>Externos:</strong> ciclos econômicos, câmbio, concorrência, regulação de aviação, política comercial, geopolítica e condições da cadeia global de suprimentos.</li>
+<li><strong>Relacionados à decisão:</strong> qualidade das informações, premissas contratuais, prazo disponível, alinhamento entre parceiros e capacidade de revisar a estratégia.</li>
+</ul>
+<h3>Plano de negócios / planejamento estratégico</h3>
+<p>Para cada iniciativa, recomenda-se construir um plano com diagnóstico, objetivo mensurável, análise de mercado, investimento necessário, projeção de custos e benefícios, riscos, responsáveis, cronograma e indicadores. A implementação deve seguir ciclos de planejamento, execução, monitoramento e correção, com decisões documentadas e revisão periódica de premissas.</p>
+</section>
+<section id="conclusao">
+<div class="kicker">08 · Encerramento</div><h2>Conclusão e aprendizados</h2>
+<p>O caso Embraer–Boeing mostra que decisões estratégicas de grande porte podem gerar oportunidades relevantes, mas estão sujeitas a condições contratuais, incertezas externas e interesses distintos entre organizações. Quando uma transação não se concretiza, a capacidade de resposta depende da preparação anterior, da clareza dos critérios decisórios e da existência de alternativas viáveis.</p>
+<p>A principal aprendizagem para a gestão é que uma parceria deve ser avaliada não apenas pelo ganho potencial, mas também pela dependência que cria, pelas condições necessárias à conclusão, pelos riscos de execução e pelo plano de contingência. A análise SWOT ajuda a conectar capacidades internas às oportunidades e ameaças do ambiente, enquanto o plano de ação transforma a análise em medidas acompanháveis.</p>
+<div class="callout"><strong>Síntese:</strong> decisões estratégicas mais robustas combinam análise racional, reconhecimento dos limites da informação, gestão de riscos, consideração dos stakeholders e monitoramento contínuo dos resultados.</div>
+</section>
+<section id="referencias">
+<div class="kicker">09 · Fontes e referências</div><h2>Referências consultadas</h2>
+<p>Fontes institucionais e documentos públicos usados para caracterizar a empresa e reconstituir o caso. A análise SWOT, os modelos decisórios e o plano de ação são elaboração acadêmica para este projeto.</p>
+<ol class="source-list">
+<li><strong>EMBRAER.</strong> Sobre a Embraer. Página institucional. Disponível em: <a href="https://www.embraer.com/corporate-about/pt" target="_blank" rel="noopener">https://www.embraer.com/corporate-about/pt</a>. Acesso em: 28 out. 2026.</li>
+<li><strong>BOEING.</strong> Boeing rescinde acordo para estabelecer joint ventures com Embraer. 25 abr. 2020. Disponível em: <a href="https://www.boeing.com.br/news/2020/boeing-terminates-agreement-with-embraer" target="_blank" rel="noopener">página da Boeing</a>. Acesso em: 28 out. 2026.</li>
+<li><strong>EMBRAER S.A.</strong> Material Fact — termination of the Master Transaction Agreement. 25 abr. 2020. Documento público arquivado na U.S. Securities and Exchange Commission. Disponível em: <a href="https://www.sec.gov/Archives/edgar/data/1355444/000129281420001450/embraer20200425_6k.htm" target="_blank" rel="noopener">registro na SEC</a>. Acesso em: 28 out. 2026.</li>
+<li><strong>EMBRAER.</strong> Relações com Investidores — Central de Análises. Disponível em: <a href="https://ri.embraer.com.br/central-de-analises/" target="_blank" rel="noopener">https://ri.embraer.com.br/central-de-analises/</a>. Acesso em: 28 out. 2026.</li>
+<li><strong>FACULDADE SÃO JUDAS.</strong> A3 — Projeto Estratégico de Gestão: UC Tomada de Decisão. Roteiro da atividade fornecido em sala/arquivo PDF.</li>
+</ol>
+<p class="muted">Antes da entrega final, conferir o padrão de referência exigido pelo professor e revisar a data de acesso conforme a data real em que o grupo consultar cada página.</p>
+</section>
+</main>
+<footer>
+<p><strong>Projeto Estratégico de Gestão · Tomada de Decisão</strong></p>
+<p>Estudo de caso público: Embraer e o encerramento do acordo com a Boeing em 2020.</p>
+<p>Versão de apoio para transferência e adaptação ao Google Sites.</p>
+</footer>
+</body>
+</html>
